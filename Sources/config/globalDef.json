@@ -1,0 +1,12 @@
+{
+    //"serverIp": "120.24.4.49",
+    
+    "serverIp": "127.0.0.1",
+    "serverPort": "9001",
+
+    //"db_ip" : "127.0.0.1",
+    "db_ip": "(local)",
+    "db_uid": "test",
+    "db_pwd": "test123456",
+    "db_db": "mytest"
+}

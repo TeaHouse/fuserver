@@ -1,0 +1,14 @@
+{
+    "100": {  //协议数据错误,协议内存数据不能转化成json格式，或者json格式错误
+        "msgId": 100,
+        "msgData": {
+            "errstr": "protocol buffer error!"
+        }
+    },
+    "101": { //没有定义该协议id
+        "msgId": 101,
+        "msgData": {
+            "errstr": "protocol id can not found!"
+        }
+    }
+}

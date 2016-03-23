@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1BC8F170-AEFC-47F1-85DA-A64E5A328E81}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>FUServer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../Sources/Config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../libs;../libs/Debug;../libs/vld/lib/Win32</AdditionalLibraryDirectories>
+      <AdditionalDependencies>jsoncpp.lib;libevent.lib;libevent_core.lib;libevent_extras.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Sources\DBSqlServer\DBDataRow.h" />
+    <ClInclude Include="..\Sources\DBSqlServer\DBDataSet.h" />
+    <ClInclude Include="..\Sources\DBSqlServer\DBProcData.h" />
+    <ClInclude Include="..\Sources\DBSqlServer\DBSqlManager.h" />
+    <ClInclude Include="..\Sources\DBSqlServer\DBSqlServer.h" />
+    <ClInclude Include="..\Sources\FUNetServer\FUNetServer.h" />
+    <ClInclude Include="..\Sources\FUNetServer\FUProtocol.h" />
+    <ClInclude Include="..\Sources\gamelogic\GameBaseLogic.h" />
+    <ClInclude Include="..\Sources\gamelogic\login\FULogin.h" />
+    <ClInclude Include="..\Sources\NetBase\NetBase.h" />
+    <ClInclude Include="..\Sources\NetBase\NetClient.h" />
+    <ClInclude Include="..\Sources\NetBase\NetServer_Libevent.h" />
+    <ClInclude Include="..\Sources\NetBase\NetServer_Linux.h" />
+    <ClInclude Include="..\Sources\NetBase\NetServer_Platform.h" />
+    <ClInclude Include="..\Sources\NetBase\NetServer_Win32.h" />
+    <ClInclude Include="..\Sources\NetBase\Socket_Event.h" />
+    <ClInclude Include="..\Sources\Platform\Include.h" />
+    <ClInclude Include="..\Sources\Utils\UtilsProjPath.h" />
+    <ClInclude Include="..\Sources\Utils\UtilsConfig.h" />
+    <ClInclude Include="..\Sources\Utils\UtilsDir.h" />
+    <ClInclude Include="..\Sources\Utils\UtilsFile.h" />
+    <ClInclude Include="..\Sources\Utils\UtilsQueue.h" />
+    <ClInclude Include="..\Sources\Utils\UtilsSingleton.h" />
+    <ClInclude Include="..\Sources\Utils\UtilsConvert.h" />
+    <ClInclude Include="..\Sources\Utils\UtilsFunction.h" />
+    <ClInclude Include="..\Sources\Utils\UtilsLock.h" />
+    <ClInclude Include="..\Sources\Utils\UtilsLog.h" />
+    <ClInclude Include="..\Sources\Utils\UtilsMemPool.h" />
+    <ClInclude Include="..\Sources\Utils\UtilsSerialize.h" />
+    <ClInclude Include="..\Sources\Utils\UtilsThread.h" />
+    <ClInclude Include="..\Sources\Utils\UtilsTime.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Sources\DBSqlServer\DBDataRow.cpp" />
+    <ClCompile Include="..\Sources\DBSqlServer\DBDataSet.cpp" />
+    <ClCompile Include="..\Sources\DBSqlServer\DBProcData.cpp" />
+    <ClCompile Include="..\Sources\DBSqlServer\DBSqlManager.cpp" />
+    <ClCompile Include="..\Sources\DBSqlServer\DBSqlServer.cpp" />
+    <ClCompile Include="..\Sources\FUNetServer\FUNetServer.cpp" />
+    <ClCompile Include="..\Sources\FUNetServer\FUProtocol.cpp" />
+    <ClCompile Include="..\Sources\gamelogic\GameBaseLogic.cpp" />
+    <ClCompile Include="..\Sources\gamelogic\login\FULogin.cpp" />
+    <ClCompile Include="..\Sources\NetBase\NetBase.cpp" />
+    <ClCompile Include="..\Sources\NetBase\NetClient.cpp" />
+    <ClCompile Include="..\Sources\NetBase\NetServer_Libevent.cpp" />
+    <ClCompile Include="..\Sources\NetBase\NetServer_Linux.cpp" />
+    <ClCompile Include="..\Sources\NetBase\NetServer_Platform.cpp" />
+    <ClCompile Include="..\Sources\NetBase\NetServer_Win32.cpp" />
+    <ClCompile Include="..\Sources\Server.cpp" />
+    <ClCompile Include="..\Sources\Utils\UtilsProjPath.cpp" />
+    <ClCompile Include="..\Sources\Utils\UtilsConfig.cpp" />
+    <ClCompile Include="..\Sources\Utils\UtilsConvert.cpp" />
+    <ClCompile Include="..\Sources\Utils\UtilsDir.cpp" />
+    <ClCompile Include="..\Sources\Utils\UtilsFile.cpp" />
+    <ClCompile Include="..\Sources\Utils\UtilsLock.cpp" />
+    <ClCompile Include="..\Sources\Utils\UtilsLog.cpp" />
+    <ClCompile Include="..\Sources\Utils\UtilsQueue.cpp" />
+    <ClCompile Include="..\Sources\Utils\UtilsSerialize.cpp" />
+    <ClCompile Include="..\Sources\Utils\UtilsThread.cpp" />
+    <ClCompile Include="..\Sources\Utils\UtilsTime.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Sources\config\globalDef.json" />
+    <None Include="..\Sources\config\globalProt.json" />
+    <None Include="..\Sources\config\prot\protLogin.json" />
+    <None Include="..\Sources\config\prot\protErrcode.json" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

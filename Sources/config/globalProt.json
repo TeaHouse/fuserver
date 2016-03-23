@@ -1,0 +1,6 @@
+{
+    "protfile": [
+        "prot/protErrcode.json", //错误码协议 100~999
+        "prot/protLogin.json"   //登录协议   1000~1100
+    ]
+}
